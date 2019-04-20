@@ -12,6 +12,18 @@ app = Flask(__name__,
             )
 
 
+# 配置参数的使用方式
+# 1.使用配置文件
+# app.config.from_pyfile("config.cfg")
+
+# 2.使用对象配置参数
+# class Config(object):
+#    DEBUG = True
+
+# 3.直接操作config字典对象
+# app.config["DEBUG"] = True
+
+
 @app.route('/')
 def hello_world():
     return 'Hello World!'
