@@ -17,8 +17,10 @@ app = Flask(__name__,
 # app.config.from_pyfile("config.cfg")
 
 # 2.使用对象配置参数
-# class Config(object):
-#    DEBUG = True
+class Config():
+    #DEBUG = True
+    ITCAST = "PYTHON"
+
 
 # 3.直接操作config字典对象
 # app.config["DEBUG"] = True
@@ -26,6 +28,7 @@ app = Flask(__name__,
 
 @app.route('/')
 def hello_world():
+    print(app.config.get("ITCAST"))
     return 'Hello World!'
 
 
